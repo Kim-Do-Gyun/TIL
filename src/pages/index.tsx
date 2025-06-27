@@ -8,9 +8,9 @@ function NewHomepageHeader() {
     return (
         <header className={styles.heroSection}>
             <div className={styles.heroLeftColumn}>
-                <h1 className={styles.heroTitle}>철학과 컴퓨터 공학</h1>
+                <span className={styles.sisyphusTitle}>Sisyphus</span>
                 <p className={styles.heroDescription}>
-                    철학과 컴퓨터 공학에 대한 글을 기록하고 공유하는 개인 웹사이트입니다. Docusaurus를 활용하여 구축했으며,<br></br>기록 및 포트폴리오를 위해 만들어졌습니다.
+                    철학과 컴퓨터 공학에 대한 글을 기록하고 공유하는 개인 웹사이트입니다.<br></br> Docusaurus를 활용하여 구축했으며,<br></br>기록 및 포트폴리오를 위해 만들어졌습니다.
                 </p>
                 <div className={styles.heroCategoryContainer}>
                     <Link className={styles.heroCategoryLink} to="/docs/category/tutorial---basics">
