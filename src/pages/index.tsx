@@ -1,44 +1,70 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
-// --- 새로운 헤더 컴포넌트 ---
-function NewHomepageHeader() {
-    return (
-        <header className={styles.heroSection}>
-            <div className={styles.heroLeftColumn}>
-                <span className={styles.sisyphusTitle}>Sisyphus</span>
-                <p className={styles.heroDescription}>
-                    철학과 컴퓨터 공학에 대한 글을 기록하고 공유하는 개인 웹사이트입니다.<br></br> Docusaurus를 활용하여 구축했으며,<br></br>기록 및 포트폴리오를 위해 만들어졌습니다.
-                </p>
-                <div className={styles.heroCategoryContainer}>
-                    <Link className={styles.heroCategoryLink} to="/docs/category/tutorial---basics">
-                        Philosophy
-                    </Link>
-                    <Link className={styles.heroCategoryLink} to="/docs/category/tutorial---extras">
-                        Computer-engineering
-                    </Link>
-                </div>
-            </div>
-            <div className={styles.heroRightColumn}>
-                {/* --- 이미지 경로를 수정했습니다 --- */}
-                <img 
-                    src="./img/hero-art.jpg" 
-                    alt="An abstract illustration of a brain, computer circuits, and question marks" 
-                    className={styles.heroImage}
-                />
-            </div>
-        </header>
-    );
+// --- 카드에 표시될 내용 ---
+const mainNavItems = [
+  {
+    title: 'Philosophy',
+    description: '철학에 대해 학습한 내용을 정리합니다.',
+    link: '/philosophy/intro',
+  },
+  {
+    title: 'Computer',
+    description: '컴퓨터 공학 관련 지식을 기록합니다.',
+    link: '/computer/intro',
+  },
+  {
+    title: 'Blog',
+    description: '일상적인 생각이나 경험을 공유합니다.',
+    link: '/blog',
+  },
+];
+
+// 카드 컴포넌트
+function Card({ title, description, link }: { title: string; description: string; link: string; }) {
+  return (
+    <div className="col col--4">
+      <Link to={link} className={styles.cardLink}>
+        <div className={`card ${styles.customCard}`}>
+          <div className="card__body">
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+        </div>
+      </Link>
+    </div>
+  );
 }
 
-// --- 메인 페이지 컴포넌트 ---
-export default function Home(): JSX.Element {
-    return (
-        <Layout title="Home" description="Kim-Do-Gyun's Tech Blog">
-            <NewHomepageHeader />
-            <main />
-        </Layout>
-    );
+// 홈페이지 메인 컴포넌트
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title="Home"
+      description="철학과 컴퓨터 공학에 대한 글을 기록하고 공유합니다.">
+      
+      {/* --- 상단 히어로 배너 --- */}
+      <header className={styles.heroBanner}>
+        <div className="container">
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+        </div>
+      </header>
+
+      {/* --- 하단 카드 섹션 --- */}
+      <main className={styles.cardSection}>
+        <div className="container">
+          <div className="row">
+            {mainNavItems.map((item, idx) => (
+              <Card key={idx} {...item} />
+            ))}
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
 }

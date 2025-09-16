@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: '철학 석사(진) 김도균',
-  tagline: '역시 철학이 최고야!',
+  title: '관점주의',
+  tagline: '답이 없는 문제는 없다 답이 많을 뿐이다!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -35,13 +35,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -64,25 +58,54 @@ const config: Config = {
     ],
   ],
 
+   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'philosophy', // 고유 ID
+        path: 'philosophy', // 1단계에서 만든 폴더 이름
+        routeBasePath: 'philosophy', // URL 경로 (예: /philosophy/intro)
+        sidebarPath: './sidebars.ts', // 2단계에서 만든 사이드바 파일
+        sidebarCollapsed: false, // 사이드바를 펼친 상태로 시작
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'computer', // 고유 ID
+        path: 'computer-engneering', // 1단계에서 만든 폴더 이름
+        routeBasePath: 'computer', // URL 경로 (예: /computer/intro)
+        sidebarPath: './sidebars.ts',
+        sidebarCollapsed: false,
+      },
+    ],
+  ],
+  
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'Kim-Do-Gyun\'s TIL',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+     navbar: {
+      title: 'TIL',
+      style: 'dark',
       items: [
+        // 'Tutorial'을 두 개의 링크로 분리합니다.
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+           to: '/philosophy/intro', // Philosophy 카테고리 링크
+          label: 'Philosophy',
           position: 'left',
-          label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/kim-do-gyun',
+           to: '/computer/intro', // Computer Engineering 카테고리 링크
+          label: 'Computer Engineering',
+          position: 'left',
+        },
+        {
+          to: '/blog',
+          label: 'Blog',
+          position: 'left'
+        },
+        {
+          href: 'https://github.com/kim-do-gyun/TIL',
           label: 'GitHub',
           position: 'right',
         },
