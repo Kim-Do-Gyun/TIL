@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "blog/2019-05-29-long-blog-post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "2019-05-29-long-blog-post"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "config.js",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "북마크"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -167,8 +168,9 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "3a4777379a147923",
+  "active": "14ed0d384cce406c",
   "lastOpenFiles": [
+    "README.md",
     "philosophy/인식론/1-1 플라톤.md",
     "무제.base",
     "무제.canvas",

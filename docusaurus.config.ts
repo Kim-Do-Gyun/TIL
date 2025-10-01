@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '관점주의',
-  tagline: '답이 없는 문제는 없다 답이 많을 뿐이다!',
+  tagline: '답이 없는 문제는 없다',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -95,7 +95,7 @@ const config: Config = {
           position: 'left',
         },
         {
-           to: '/computer/intro', // Computer Engineering 카테고리 링크
+           to: '/computer-engneering/intro', // Computer Engineering 카테고리 링크
           label: 'Computer Engineering',
           position: 'left',
         },
