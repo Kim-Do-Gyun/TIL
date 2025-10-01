@@ -170,6 +170,16 @@
   },
   "active": "14ed0d384cce406c",
   "lastOpenFiles": [
+    "computer-engineering/HTML/1. HTML 기본요소와 구조.md",
+    "computer-engineering/HTML/2. HTML 태그.md",
+    "computer-engineering/intro.md",
+    "computer-engineering/HTML",
+    "computer-engineering",
+    "computer/HTML/2. HTML 태그.md",
+    "computer/HTML/1. HTML 기본요소와 구조.md",
+    "computer/HTML",
+    "computer/intro.md",
+    "computer",
     "README.md",
     "philosophy/인식론/1-1 플라톤.md",
     "무제.base",
@@ -199,7 +209,6 @@
     "node_modules/ms/license.md",
     "2025-07-25.md",
     "docs/일지",
-    "docs/tutorial-basics/congratulations.md",
-    "docs/HTML"
+    "docs/tutorial-basics/congratulations.md"
   ]
 }

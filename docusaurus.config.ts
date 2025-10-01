@@ -73,7 +73,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'computer', // 고유 ID
-        path: 'computer-engneering', // 1단계에서 만든 폴더 이름
+        path: 'computer-engineering', // 1단계에서 만든 폴더 이름
         routeBasePath: 'computer', // URL 경로 (예: /computer/intro)
         sidebarPath: './sidebars.ts',
         sidebarCollapsed: false,
@@ -95,7 +95,7 @@ const config: Config = {
           position: 'left',
         },
         {
-           to: '/computer-engineering/intro', // Computer Engineering 카테고리 링크
+           to: '/computer/intro', // Computer Engineering 카테고리 링크
           label: 'Computer Engineering',
           position: 'left',
         },
@@ -123,6 +123,7 @@ const config: Config = {
             },
           ],
         },
+        
         {
           title: 'Community',
           items: [
