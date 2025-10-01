@@ -95,7 +95,7 @@ const config: Config = {
           position: 'left',
         },
         {
-           to: '/computer-engneering/intro', // Computer Engineering 카테고리 링크
+           to: '/computer-engineering/intro', // Computer Engineering 카테고리 링크
           label: 'Computer Engineering',
           position: 'left',
         },
