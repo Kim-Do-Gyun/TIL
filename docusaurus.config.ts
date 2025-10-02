@@ -118,8 +118,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Philosophy',
+              to: '/philosophy/intro',
+            },
+           {
+              label: 'Computer',
+              to: '/computer/intro',
             },
           ],
         },
